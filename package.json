@@ -1,7 +1,7 @@
 {
   "name": "everyauth",
   "description": "Auth solution (password, facebook, & more) for your node.js Connect & Express apps",
-  "version": "0.2.32",
+  "version": "0.2.31",
   "homepage": "https://github.com/bnoguchi/everyauth/",
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "oauth": "https://github.com/ciaranj/node-oauth/tarball/master",
+    "oauth": "git+ssh://git@github.com:ciaranj/node-oauth.git",
     "restler": ">=0.2.1",
     "request": ">=2.2.0",
     "connect": ">=1 <2",
