@@ -147,8 +147,7 @@ provides an easy way to access the user as:
 - `everyauth.user` via the `everyauth` helper accessible from your `express` views.
 - `user` as a helper accessible from your `express` views
 
-To access the user, configure `everyauth.everymodule.findUserById` and
-optionally `everyauth.everymodule.userPkey`.
+To access the user, configure `everyauth.everymodule.findUserById`.
 For example, using [mongoose](http://github.com/LearnBoost/mongoose):
 
 ```javascript
@@ -177,14 +176,6 @@ Moreover, you can access the user in your views as `everyauth.user` or as `user`
     //- Inside ./views/home.jade
     span.user-id= everyauth.user.name
     #user-id= user.id
-
-`everyauth` assumes that you store your users with an `id` property. If not --
-e.g, if you adopt the convention `user.uid` over `user.id` -- then just make
-sure to configure the `everyauth.everymodule.userPkey` parameter:
-
-```javascript
-everyauth.everymodule.userPkey('uid');
-```
 
 ## Express Helpers
 
@@ -285,7 +276,7 @@ everyauth.everymodule.handleLogout( function (req, res) {
 });
 ```
 
-## Custom redirect on password-based login or registration
+## Custom redirect on login or registration
 
 You may want your own callback that decides where to send a user after login or registration.  One way of doing this is with the `respondToLoginSucceed` and `respondToRegistrationSucceed` methods.  This assumes that you have set a `.redirectTo` property on your `req.session` object:
 

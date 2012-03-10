@@ -388,6 +388,8 @@ app.get('/', function (req, res) {
   res.render('home');
 });
 
+everyauth.helpExpress(app);
+
 app.listen(3000);
 
 console.log('Go to http://local.host:3000');
